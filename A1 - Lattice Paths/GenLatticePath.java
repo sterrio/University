@@ -6,14 +6,17 @@ import java.util.ArrayList;
 public class GenLatticePath {
 	public static void main(String [] args){
 		
-		System.out.println("What is the nxn size of the grid?");
-		
-		//Creating scanner to take in the input size of n.
 		Scanner sc = new Scanner(System.in);
+		System.out.println("Are you computing with a Diagonal Direction allowed?");
+		
+		//Checking user response.
+		if (sc.next().toLowerCase().equals("no")){
+		
+		System.out.println("What is the NxN size of the grid?");
+		//Creating scanner to take in the input size of n.
 		int n = sc.nextInt();
 		
 		//Staring timer.
-		
 		long startTime, endTime, executionTime;
 		startTime = System.currentTimeMillis();
 		
@@ -39,6 +42,34 @@ public class GenLatticePath {
 		endTime = System.currentTimeMillis();
 		executionTime = endTime - startTime;
 		System.out.println("The program took " + executionTime + " milliseconds");
+		
+		}
+		
+		else {
+			
+			System.out.println("What is the NxN size of the grid?");
+			
+			//Creating scanner to take in the input size of n.
+			int n = sc.nextInt();
+			
+			//Staring timer.
+			long startTime, endTime, executionTime;
+			startTime = System.currentTimeMillis();
+			
+			//creating and array list to save the possible routes.
+			ArrayList<String> keys = new ArrayList<String>();
+			
+			//Calling the direction function and then printing out the list of keys.
+			DiagonalDirection(0,0,n,"", keys);
+			
+			System.out.println("There are " + keys.size() +" possible paths.");
+			System.out.println(keys);
+			
+			//Display endTime.
+			endTime = System.currentTimeMillis();
+			executionTime = endTime - startTime;
+			System.out.println("The program took " + executionTime + " milliseconds");
+		}
 	}
 	
 	//Creating a function to get the paths of the lattice.
@@ -59,6 +90,7 @@ public class GenLatticePath {
 			
 			Direction(x+1,y,n, route + "E",keys);
 			Direction(x1, y1+1, n, route + "N",keys);
+			Direction(x1+1, y1+1, n, route + "D",keys);
 		}
 		
 		// When x position is less than N, increase horizontally and add E to route.
@@ -73,12 +105,11 @@ public class GenLatticePath {
 		
 	}
 	
-	
-	public static void DiagonalDirection (int x, int y, int count, int n, String route, ArrayList<String> keys){
+	//Used if user is testing with diagonals  allowed.
+	public static void DiagonalDirection(int x, int y,int n, String route, ArrayList<String> keys){
 		// When we reach n, (both x and y values equal n) save it to an array list.
 		if ( x == n && y == n){
 			keys.add(route);
-			count++;
 			return;
 		}
 		
@@ -88,19 +119,19 @@ public class GenLatticePath {
 		
 		// When x and y are both less than n, increase them both and add corresponding letters to route.
 		if (x < n && y < n){
-			Direction(x+1,y,count, n, route + "E",keys);
-			Direction(x1, y1+1,count, n, route + "N",keys);
-			Direction(x1+1, y1+1,count, n, route + "D",keys);
+			DiagonalDirection(x+1,y,n, route + "E",keys);
+			DiagonalDirection(x1, y1+1,n, route + "N",keys);
+			DiagonalDirection(x1+1, y1+1,n, route + "D",keys);
 		}
 		
 		// When x position is less than N, increase horizontally and add E to route.
 		if ( x < n && y == n){
-			Direction(x+1,y,count, n, route + "E",keys);
+			DiagonalDirection(x+1,y,n, route + "E",keys);
 		}
 		
 		// When y position is less than n, increase vertically and add N to route.
 		if (x == n && y < n){
-			Direction(x, y+1,count, n, route + "N",keys);
+			DiagonalDirection(x, y+1,n, route + "N",keys);
 		}	
 	}
 	
