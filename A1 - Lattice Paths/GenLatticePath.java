@@ -73,6 +73,37 @@ public class GenLatticePath {
 		
 	}
 	
+	
+	public static void DiagonalDirection (int x, int y, int count, int n, String route, ArrayList<String> keys){
+		// When we reach n, (both x and y values equal n) save it to an array list.
+		if ( x == n && y == n){
+			keys.add(route);
+			count++;
+			return;
+		}
+		
+		// Setting temporary values to save the original position of x and y.
+		int x1 = x;
+		int y1 = y;
+		
+		// When x and y are both less than n, increase them both and add corresponding letters to route.
+		if (x < n && y < n){
+			Direction(x+1,y,count, n, route + "E",keys);
+			Direction(x1, y1+1,count, n, route + "N",keys);
+			Direction(x1+1, y1+1,count, n, route + "D",keys);
+		}
+		
+		// When x position is less than N, increase horizontally and add E to route.
+		if ( x < n && y == n){
+			Direction(x+1,y,count, n, route + "E",keys);
+		}
+		
+		// When y position is less than n, increase vertically and add N to route.
+		if (x == n && y < n){
+			Direction(x, y+1,count, n, route + "N",keys);
+		}	
+	}
+	
 	//Making a recursive function to be used to calculate the factorial of N
 	public static int factorial(int e){
 		
