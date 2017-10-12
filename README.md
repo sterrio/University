@@ -17,6 +17,6 @@ Progressively updated repository to upload projects throughout my computer scien
 
 ## Current Objectives
 
-* HTML Design
+* Java Script and CSS syntax 
 * Database Management (SQL)
 * Game Creation (Unity)
