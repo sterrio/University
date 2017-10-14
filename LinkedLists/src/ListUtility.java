@@ -66,6 +66,8 @@ public class ListUtility {
 		// If list 2 still isn't null, add
 		while(cursor2 != null){
 			list3.add(cursor2);
+			
+			cursor2  = list2.next();
 		}
 		
 		return list3;
