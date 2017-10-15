@@ -15,8 +15,12 @@ Progressively updated repository to upload projects throughout my computer scien
 
 **String Matching** - Finds DNA sequence matches using strings.
 
+**Linked Lists** - Testing various features, Geo Quiz game made with them.
+
+**Grade Calculator** - Calculates median and mean of input Grades.
+
 ## Current Objectives
 
-* Java Script and CSS syntax 
+* Java Script syntax 
 * Database Management (SQL)
 * Game Creation (Unity)
