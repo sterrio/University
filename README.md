@@ -19,6 +19,8 @@ Progressively updated repository to upload projects throughout my computer scien
 
 **Grade Calculator** - Calculates median and mean of input Grades.
 
+**Recursion** - Various recursive test methods.
+
 ## Current Objectives
 
 * Java Script syntax 
