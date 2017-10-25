@@ -2,6 +2,7 @@
 
 public class PlayerRecord {
 	
+	// Creating instance variables
 	private String position;
 	private String name;
 	private String team;
@@ -16,19 +17,20 @@ public class PlayerRecord {
 	private int PIM; // Penalties in minutes
 	private int P = G + A; // Points
 	
-	public PlayerRecord(String name, String team, String position, int GamesPlayed, int goals, int assists, int ShotsonGoal, int GameWinningGoals, int PIM){
-		//Setters
-		name = this.name;
-		team = this.team;
-		position = this.position;
-		GamesPlayed = this.GP;
-		goals = this.G;
-		assists = this.A;
-		ShotsonGoal = this.SOG;
-		GameWinningGoals = this.GWG;
-		PIM = this.PIM;
-		int Points = this.P;
+	public PlayerRecord(String name, String position, String team, int GamesPlayed, int goals, int assists, int PIM, int ShotsonGoal, int GameWinningGoals){
+		//Setting
+		this.name = name;
+		this.team = team;
+		this.position = position;
+		this.GP = GamesPlayed;
+		this.G = goals;
+		this.A = assists;
+		this.SOG = ShotsonGoal;
+		this.GWG = GameWinningGoals;
+		this.PIM = PIM;
 	}
+	
+	//getters
 	public String getName(){return name;}
 	public String getTeam(){return team;}
 	public String getPos(){return position;}
@@ -41,4 +43,8 @@ public class PlayerRecord {
 	public int getGWG(){return GWG;}
 	public int getPIM(){return PIM;}
 	public int getPoints(){return P;}
+	
+	// String to string method to print out the values of the record
+	public String toString() {return name + " " + position + " " + team + " " + GP + " " + G + " " + A + " " + PIM + " " + SOG + " " + GWG;}
+	
 }
