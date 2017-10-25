@@ -6,6 +6,7 @@ import java.io.*;
 public class NHLListDemo {
 	public static void main(String [] arg)throws IOException{
 		
+		PrintWriter writer = new PrintWriter("nhlstatsOutput.txt", "UTF-8");
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the location of your text file: ");
 		String filename = sc.nextLine();
@@ -54,21 +55,43 @@ public class NHLListDemo {
 		
 		NHLStats nhl = new NHLStats(playlist);
 		
+		writer.println("NHL Results Summary");
+		
+		writer.println("Players with highest points and their teams: ");
+		
 		for (int i = 0; i < nhl.highestPoints().size(); i ++){
+			
+			writer.println(nhl.highestPoints().getAt(i));
 			System.out.println(nhl.highestPoints().getAt(i));
 		}
 		
+		writer.println("Most aggressive players, their teams and their positions: ");
 		for (int i = 0; i < nhl.mostAggressive().size(); i ++){
+			
+			writer.println(nhl.mostAggressive().getAt(i));
 			System.out.println(nhl.mostAggressive().getAt(i));
 		}
 		
+		writer.println("Most valuable players and their teams: ");
 		for (int i = 0; i < nhl.MVP().size(); i ++){
+			
+			writer.println(nhl.MVP().getAt(i));
 			System.out.println(nhl.MVP().getAt(i));
 		}
 		
+		writer.println("Most promising players and their teams: ");
 		for (int i = 0; i < nhl.mostPromising().size(); i ++){
+			
+			writer.println(nhl.mostPromising().getAt(i));
 			System.out.println(nhl.mostPromising().getAt(i));
 		}
-
+		
+		writer.println("Teams that had the most number of penalty minutes: ");
+		nhl.mostPenalty(writer);
+		
+		writer.println("Teams that had the most number of game winning goals: ");
+		nhl.mostGameWinningGoals(writer);
+		
+		writer.close();
 	}
 }

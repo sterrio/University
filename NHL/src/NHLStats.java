@@ -1,4 +1,8 @@
 // Assignment 2 - Linked Lists, October 24th - Stephen Terrio, B00755443
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.*;
+
 
 public class NHLStats {
 
@@ -95,4 +99,79 @@ public class NHLStats {
 		}
 		return potentialPlayers;
 	}
+
+	public void mostPenalty(PrintWriter writer)throws IOException{
+		
+		HashMap<String, Integer> path = new HashMap<String, Integer>();
+		LinkedList<String> teams = new LinkedList <String>();
+		
+		for (int i = 0; i < playerList.size(); i ++){
+			if (path.containsKey(playerList.getAt(i).getTeam())){
+				
+			path.put(playerList.getAt(i).getTeam(), path.get(playerList.getAt(i).getTeam()) + playerList.getAt(i).getPIM());
+			}
+			else {
+				path.put(playerList.getAt(i).getTeam(), playerList.getAt(i).getPIM());
+			}
+		}
+		int most = 0;
+		
+		for(Map.Entry p: path.entrySet()){
+			
+			if (most < (int) p.getValue()){
+				
+				teams.clear();
+				most = (int) p.getValue();
+				teams.add((String) p.getKey());
+			}
+			
+			else if (most == (int) p.getValue()){
+				teams.add((String) p.getKey());
+			}
+			
+		}
+		
+		for (int i = 0; i < teams.size(); i++){
+			writer.println(teams.getAt(i) + "\t" + most);
+			System.out.println(teams.getAt(i) + "\t" + most);
+		}
+	}
+
+	public void mostGameWinningGoals(PrintWriter writer)throws IOException{
+		
+		HashMap<String, Integer> path = new HashMap<String, Integer>();
+		LinkedList<String> teams = new LinkedList <String>();
+		
+		for (int i = 0; i < playerList.size(); i ++){
+			if (path.containsKey(playerList.getAt(i).getTeam())){
+				
+			path.put(playerList.getAt(i).getTeam(), path.get(playerList.getAt(i).getTeam()) + playerList.getAt(i).getGWG());
+			}
+			else {
+				path.put(playerList.getAt(i).getTeam(), playerList.getAt(i).getGWG());
+			}
+		}
+		int most = 0;
+		
+		for(Map.Entry p: path.entrySet()){
+			
+			if (most < (int) p.getValue()){
+				
+				teams.clear();
+				most = (int) p.getValue();
+				teams.add((String) p.getKey());
+			}
+			
+			else if (most == (int) p.getValue()){
+				teams.add((String) p.getKey());
+			}
+			
+		}
+		
+		for (int i = 0; i < teams.size(); i++){
+			writer.println(teams.getAt(i) + "\t" + most);
+			System.out.println(teams.getAt(i) + "\t" + most);
+		}
+	}
+
 }

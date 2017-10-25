@@ -1,0 +1,14 @@
+NHL Results Summary
+Players with highest points and their teams: 
+St.Louis RW TB 48 17 43 14 112 2
+Most aggressive players, their teams and their positions: 
+Ott C BUF 48 9 15 93 73 3
+Clowe RW NYR 40 3 16 93 87 0
+Most valuable players and their teams: 
+Carter C LA 48 26 7 16 133 8
+Most promising players and their teams: 
+Ovechkin RW WSH 48 32 24 36 220 4
+Teams that had the most number of penalty minutes: 
+BOS	294
+Teams that had the most number of game winning goals: 
+PIT	25
