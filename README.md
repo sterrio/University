@@ -17,6 +17,8 @@ Progressively updated repository to upload projects throughout my computer scien
 
 **Linked Lists** - Testing various features, Geo Quiz game made with them.
 
+**NHL** - Uses linked lists method to find MVP, Most Agressive player, etc..
+
 **Grade Calculator** - Calculates median and mean of input Grades.
 
 **Recursion** - Various recursive test methods.
