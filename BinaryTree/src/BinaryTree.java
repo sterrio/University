@@ -1,4 +1,5 @@
 // Assignment 2 - Binary Tree, October 25th - Stephen Terrio, B00755443
+import java.util.*;
 
 public class BinaryTree<T> 
 {
@@ -205,4 +206,5 @@ public class BinaryTree<T>
 			return "The tree is not balanced.";
 		}
 	}
+	
 }
