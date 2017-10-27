@@ -5,23 +5,28 @@ Progressively updated repository to upload projects throughout my computer scien
 
 ## Content
 
-**Lattice Paths** - Size and Combinations 
-
 **Big O complexity** - Various programs of different n sizes.
 
-**Generics** - Queue and Stack implementations
+**Binary Tree** - Test methods for Binary Tree Searching.
 
-**Object Overlay** - Objects with methods for touching, containing etc..
+**Generics** - Queue and Stack implementations.
 
-**String Matching** - Finds DNA sequence matches using strings.
+**Grade Calculator** - Calculates median and mean of input Grades.
+
+**Lattice Paths** - Size and Combinations.
 
 **Linked Lists** - Testing various features, Geo Quiz game made with them.
 
 **NHL** - Uses linked lists method to find MVP, Most Agressive player, etc..
 
-**Grade Calculator** - Calculates median and mean of input Grades.
+**Object Overlay** - Objects with methods for touching, containing etc..
 
 **Recursion** - Various recursive test methods.
+
+**String Matching** - Finds DNA sequence matches using strings.
+
+**Walking ALG** - Jumps between two lists and orders them according to value.
+
 
 ## Current Objectives
 
