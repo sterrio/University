@@ -182,9 +182,27 @@ public class BinaryTree<T>
 		//If the tree is empty, return 0.
 		if (tree == null){return 0;}
 		
-		else{
-			// If the true isn't empty, take the highest value of the right of left tree path.
-		return (1+ Math.max(treeHeight(tree.getLeft()),treeHeight(tree.getRight())));
+		else {
+			// If the true isn't empty, take the highest value of the right of left tree path and add one to account for the route.
+		return ( Math.max(treeHeight(tree.getLeft()),treeHeight(tree.getRight())) + 1 );
+		}
+	}
+	
+	public <T> String treeBalance(BinaryTree<T> tree){
+		//If the tree is empty, return 0.
+		if (tree == null){return null;}
+		
+		else {
+			if ( Math.max(treeHeight(tree.getLeft().getLeft()), treeHeight(tree.getLeft().getRight()))
+			==   Math.max(treeHeight(tree.getRight().getLeft()), treeHeight(tree.getRight().getRight()))
+			||   Math.max(treeHeight(tree.getLeft().getLeft()), treeHeight(tree.getLeft().getRight()))
+			==	 Math.max(treeHeight(tree.getRight().getLeft()), treeHeight(tree.getRight().getRight())) + 1
+			||   Math.max(treeHeight(tree.getLeft().getLeft()), treeHeight(tree.getLeft().getRight()))
+			==	 Math.max(treeHeight(tree.getRight().getLeft()), treeHeight(tree.getRight().getRight())) - 1){
+				return "The tree is balanced.";
+			}
+			
+			return "The tree is not balanced.";
 		}
 	}
 }

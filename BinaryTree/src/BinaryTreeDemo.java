@@ -55,12 +55,14 @@ public class BinaryTreeDemo
 		System.out.println(j);
 		
 		
-		System.out.println("Height of Tree:\t");
+		System.out.print("Height of Tree: \t");
 		int leftCount = 1;
 		int rightCount = 1;
 		int i = bt.treeHeight(A);
 		System.out.print(i);
 		
+		System.out.println();
+		System.out.println(bt.treeBalance(A));
 	}
 	
 }
