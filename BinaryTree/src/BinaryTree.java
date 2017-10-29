@@ -207,4 +207,14 @@ public class BinaryTree<T>
 		}
 	}
 	
+	public static <T> void levelOrder (BinaryTree <T> root){
+		 
+		// initializing an array list to hold nodes
+		ArrayList <BinaryTree<String>> list2 = new ArrayList<BinaryTree<String>>();	 
+		
+		System.out.println( root.getData());
+		
+		
+		
+	}
 }

@@ -12,9 +12,12 @@ public class BinaryTreeDemo1 {
 		//Getting the input and setting it as the root of the tree to be formed.
 		System.out.print("Enter Node Name or Done: ");
 		String input = sc.next();
+		
+		//Handling the case where the tree has no values inputed
+		if(input.toLowerCase().equals("done")){System.out.println("The Binary Tree is empty");return;}
 		A.makeRoot(input);
 		
-		// Setting the 
+		// Setting the first child (before loop to check if it could be "done").
 		System.out.print("Enter Node Name or Done: ");
 		input = sc.next();
 		
