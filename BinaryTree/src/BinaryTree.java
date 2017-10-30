@@ -185,7 +185,8 @@ public class BinaryTree<T>
 		
 		else {
 			// If the true isn't empty, take the highest value of the right of left tree path and add one to account for the route.
-		return ( Math.max(treeHeight(tree.getLeft()),treeHeight(tree.getRight())) + 1 );
+			// (INCLUDING THE ROOT)
+		return ( Math.max(treeHeight(tree.getLeft()),treeHeight(tree.getRight())) + 1);
 		}
 	}
 	
@@ -207,14 +208,30 @@ public class BinaryTree<T>
 		}
 	}
 	
-	public static <T> void levelOrder (BinaryTree <T> root){
+	public static <String> void levelOrder (BinaryTree <String> root){
 		 
 		// initializing an array list to hold nodes
 		ArrayList <BinaryTree<String>> list2 = new ArrayList<BinaryTree<String>>();	 
 		
-		System.out.println( root.getData());
+		//Adding the root to the array list to initialize list
+		list2.add(root);
 		
-		
-		
+		while (!list2.isEmpty()){
+			
+			// Get the first node in the array list add the current node.
+            BinaryTree<String> temp = list2.remove(0);
+            	// Print out the current node
+            	System.out.print(temp.getData() + "\t");
+            
+            // If the left side child is not empty, add to list.
+		    if (temp.getLeft() != null) {
+		    	list2.add(temp.getLeft());
+		    }
+		    
+		    // If the right side child is not empty, add to list.
+		    if (temp.getRight() != null) {
+		    	list2.add(temp.getRight());
+		    }
+		}
 	}
 }

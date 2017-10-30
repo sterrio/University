@@ -58,6 +58,10 @@ public class BinaryTreeDemo1 {
 		BinaryTree.postorder(A);
 		System.out.println();
 		
+		System.out.print("Levelorder:\t");
+		BinaryTree.levelOrder(A);
+		System.out.println();
+		
 	}
 	
 	// Method used to insert the inputs into the tree. 
