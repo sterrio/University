@@ -30,6 +30,6 @@ Progressively updated repository to upload projects throughout my computer scien
 
 ## Current Objectives
 
-* Java Script syntax 
 * Database Management (SQL)
 * Game Creation (Unity)
+* Python Syntax
