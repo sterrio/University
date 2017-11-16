@@ -9,8 +9,8 @@ public class HuffmanAlG {
 		
 		// Getting the file location
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter the location of your text file: ");
-		String filename = "/Users/jarretterrio/Desktop/Pokemon.txt";
+		System.out.println("Enter the location of your Pokemon text file: ");
+		String filename = sc.next();
 		
 		// Reading the file
 		File text = new File(filename);
@@ -55,7 +55,7 @@ public class HuffmanAlG {
 			temp.makeRoot(pairs.get(j));
 			nodes.add(temp);
 		}	
-		
+		// creating a new array list to store the sorted pairs based on probability value
 		ArrayList<BinaryTree<Pair>> sortedNodes = new ArrayList<BinaryTree<Pair>>();
 		
 		while(nodes.size() > 0){
