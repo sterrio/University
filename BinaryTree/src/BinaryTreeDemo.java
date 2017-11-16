@@ -65,5 +65,4 @@ public class BinaryTreeDemo
 		System.out.println();
 		System.out.println(bt.treeBalance(A));
 	}
-	
 }
