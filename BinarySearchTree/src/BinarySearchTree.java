@@ -162,5 +162,79 @@ public class BinarySearchTree<T extends Comparable<T>>
 		}
 		size--;
 	}
+	// Driver method for other recursive search
+	public BinaryTree<T> recursiveSearch(T key){
+		if (tree.isEmpty()) return null;
+	else
+		return recursiveSearch(tree, key);
+	}
+
+	// Recursive search method
+	public BinaryTree<T> recursiveSearch(BinaryTree <T> t, T key){
+		if (t.isEmpty()){ return null;}
+		else {
+			// if the root is smaller than the key, get the right node
+			if (((Comparable <T>)t.getData()).compareTo(key) < 0){
+				if(t.getRight() == null){return null;}
+			return recursiveSearch(t.getRight(), key);
+			}
+			// if the root is bigger than the key, get the left node
+			if (((Comparable <T>)t.getData()).compareTo(key) > 0){
+				if(t.getLeft() == null){return null;}
+				return recursiveSearch(t.getLeft(), key);
+			}
+			// if the root is equal to the key, get the node
+			if (((Comparable <T>)t.getData()).compareTo(key) == 0){
+				return t.root();
+			}
+		}
+		return null;
+	}
+
+	// Same as getMax but get left instead of right.
+	public <T> T getMin(BinaryTree <T> t){
+		
+		if (t.getLeft() == null ){
+			return t.getData();
+			}
+		
+		else {
+			return getMin(t.getLeft());
+		}
+	}
+
+	// Doing exercise 1 & 2, recursively 
+	public  <T> T getMax(BinaryTree <T> t){
+			// if the right node is null return the current node
+			if (t.getRight() == null ){
+				return t.getData();
+				}
+			
+			else {
+				// If the right node is not null make that the current node.
+				return getMax(t.getRight());
+			}
+		}
+
+	// Determining if it is a binary search tree
+	public boolean BinarySearchDet(BinaryTree <T> t){
+		// if null return true
+		if (t == null){return true;}
+		// if there is a left node, check if it is smaller than parent
+		 if (t.getLeft() != null && ((Comparable <T> )t.getLeft().getData()).compareTo(t.getData()) > 0){
+			    return false;
+			  }
+		// if there is a right node, check if it is bigger than parent
+		 if (t.getRight() != null  && ((Comparable <T> )t.getRight().getData()).compareTo(t.getData()) < 0){
+			    return false;
+			  }
+		 
+		 // check if both left & right passed criteria
+		  if (BinarySearchDet(t.getLeft()) == false || BinarySearchDet(t.getRight()) == false){
+			    return false;
+			  }
+		  
+		  return true;
+	}
 }
 	

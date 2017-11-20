@@ -162,69 +162,6 @@ public class BinaryTree<T>
 			System.out.print(t.getData() + "\t");
 		}
 	}
-	
-	// Doing exercise 1 & 2, recursively 
-	public static <T> T getMax(BinaryTree <T> t){
-		// if the right node is null return the current node
-		if (t.getRight() == null ){
-			return t.getData();
-			}
-		
-		else {
-			// If the right node is not null make that the current node.
-			return getMax(t.getRight());
-		}
-	}
-
-	// Same as getMax but get left instead of right.
-	public static <T> T getMin(BinaryTree <T> t){
-		
-		if (t.getLeft() == null ){
-			return t.getData();
-			}
-		
-		else {
-			return getMax(t.getLeft());
-		}
-	}
-
-	// Recursive search method
-	public BinaryTree<T> recursiveSearch(BinaryTree <T> t, T key){
-		if (t.isEmpty()){ return null;}
-		else {
-			// if the root is smaller than the key, get the right node
-			if (((Comparable <T>)t.getData()).compareTo(key) < 0){
-				if(t.getRight() == null){return null;}
-			return recursiveSearch(t.getRight(), key);
-			}
-			// if the root is bigger than the key, get the left node
-			if (((Comparable <T>)t.getData()).compareTo(key) > 0){
-				if(t.getLeft() == null){return null;}
-				return recursiveSearch(t.getLeft(), key);
-			}
-			// if the root is equal to the key, get the node
-			if (((Comparable <T>)t.getData()).compareTo(key) == 0){
-				return t.root();
-			}
-		}
-		return null;
-	}
-
-	public boolean BinarySearchDet(BinaryTree <T> t){
-		if (t.getData() == null){return true;}
-		
-		 if (((Comparable <T> )t.getLeft()).compareTo(null) != 0 && ((Comparable <T> )t.getLeft().getData()).compareTo(t.getData()) > 0){
-			    return false;
-			  }
-		 if (((Comparable <T> )t.getRight()).compareTo(null) != 0 && ((Comparable <T> )t.getRight().getData()).compareTo(t.getData()) < 0){
-			    return false;
-			  }
-		 
-		  if (BinarySearchDet(t.getLeft()) == false || BinarySearchDet(t.getRight()) == false){
-			    return false;
-			  }
-		  return true;
-	}
 }
 	
 
