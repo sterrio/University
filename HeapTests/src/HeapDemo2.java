@@ -25,4 +25,3 @@ public class HeapDemo2 {
 		writer.close();
 	}
 }
-///Users/jarretterrio/Desktop/Unsorted.txt
