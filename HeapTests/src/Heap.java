@@ -1,4 +1,4 @@
-// Assignment 4 - Stephen Terrio B00755443 
+// Assignment 4 Heap sort - Stephen Terrio B00755443 
 
 import java.util.ArrayList;
 
@@ -127,20 +127,82 @@ public class Heap<T extends Comparable<T>>
 	
 	// Finding the Minimum value in the array List
 	public T findMin(){
-		
+		// if the heap has no values, return null
 		if (isEmpty()){
 			return null;
 		}
+		
+		// If there's only one or two nodes, return respective node.
+		if (size() < 2){return heapList.get(size()-1);}
+		
 		// Setting the smallest to the first leaf node
 		T smallest = heapList.get((size()/2) + 1);
+		
+		// If there's only 3 nodes, start at 1 instead
+		if(size() == 3){
+			smallest = heapList.get(1);
+		}
+		
 		// checking all other leaf nodes
 		for (int i = (size()/2) + 1; i < size(); i ++ ){
 			// if the current leaf is smaller than the smallest leaf, set it as smallest
-			if (heapList.get(i).compareTo(smallest) > 0){
+			if (heapList.get(i).compareTo(smallest) < 0){
 				smallest = heapList.get(i);
 			}
 		}
 		// return the smallest leaf node.
 		return smallest;
+	}
+
+	// dequeuing the smallest value and re-organizing the heap.
+	public T dequeueMin(){
+		// if the heap has no values return null.
+		if (isEmpty()){
+			return null;
+		}else {
+			
+			if(size() < 2){
+				T temp = heapList.get(size() - 1);
+				heapList.remove(size() - 1);
+				return temp;
+			}
+			
+			// getting the smallest value
+			T removed = findMin();
+			int index = heapList.indexOf(removed);
+	
+			
+			// Replacing the recently removed with the last element
+			T last = heapList.get(heapList.size() - 1);
+			// Saving the index of the removed minimum to be used to re organize.
+			T lost  = heapList.get(index);
+			
+			heapList.set(index , last);
+			heapList.remove(heapList.size() - 1);
+			
+			// looping through the elements after the index and moving them over one to the right.
+			for (int i  = index + 1; i < heapList.size() - index; i++ ){
+				
+				T temp = heapList.get(i);
+				heapList.set(i, lost);
+				lost = temp;
+			}		
+			// sift and re organize
+			// If the current key is greater than the parent key, switch
+			while (((Comparable <T>) heapList.get(index)).compareTo(heapList.get(((index -1)/2))) > 0){
+				
+				int indexTemp = (index - 1)/2;
+				T switched = heapList.get(indexTemp);
+				// Setting the key to the parent
+				heapList.set(indexTemp, heapList.get(index));
+				//setting the parent to the key
+				heapList.set(index, switched);
+				// Setting the new index.
+				index = indexTemp;
+			}
+			
+			return removed;
+		}
+
 	}
 }

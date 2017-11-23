@@ -26,5 +26,11 @@ public class HeapDemo
 			myHeap.enumerate();
 		}		
 		
+		System.out.println(myHeap.findMin().toString());
+		System.out.println(myHeap.dequeueMin().toString());
+		
+		myHeap.enumerate();
+		
+		
 	}
 }
