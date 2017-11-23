@@ -133,7 +133,7 @@ public class Heap<T extends Comparable<T>>
 		}
 		
 		// If there's only one or two nodes, return respective node.
-		if (size() < 2){return heapList.get(size()-1);}
+		if (size() < 3){return heapList.get(size()-1);}
 		
 		// Setting the smallest to the first leaf node
 		T smallest = heapList.get((size()/2) + 1);
@@ -179,17 +179,10 @@ public class Heap<T extends Comparable<T>>
 			
 			heapList.set(index , last);
 			heapList.remove(heapList.size() - 1);
-			
-			// looping through the elements after the index and moving them over one to the right.
-			for (int i  = index + 1; i < heapList.size() - index; i++ ){
-				
-				T temp = heapList.get(i);
-				heapList.set(i, lost);
-				lost = temp;
-			}		
+					
 			// sift and re organize
 			// If the current key is greater than the parent key, switch
-			while (((Comparable <T>) heapList.get(index)).compareTo(heapList.get(((index -1)/2))) > 0){
+			while (((Comparable <T>) heapList.get(index )).compareTo(heapList.get(((index -1)/2))) > 0){
 				
 				int indexTemp = (index - 1)/2;
 				T switched = heapList.get(indexTemp);

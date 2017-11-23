@@ -1,10 +1,11 @@
 import java.util.Scanner;
 public class HeapDemo
 {
-	public static void main(String[] args)
-	{
+	public static void main(String[] args){
+		
 		Heap<Integer> myHeap = new Heap<Integer>();
 		Scanner keyboard = new Scanner(System.in);
+		
 		System.out.print("Enter positive integers into the heap (-1 when done): ");
 		Integer num = keyboard.nextInt();
 		while (num!=-1)
@@ -25,7 +26,7 @@ public class HeapDemo
 			System.out.println("Deleting " + myHeap.deleteMax());
 			myHeap.enumerate();
 		}		
-		
+		// Testing the methods added to heap class and printing out resulting heap.
 		System.out.println(myHeap.findMin().toString());
 		System.out.println(myHeap.dequeueMin().toString());
 		
