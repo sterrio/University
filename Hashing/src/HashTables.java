@@ -24,6 +24,9 @@ public class HashTables {
 		System.out.println("Enter the amount of keys to be hashed: ");
 		int keys = sc.nextInt();
 		
+		// Getting the load factor using formula
+		int loadFac = keys/tableSize;
+		
 		// Generating random keys using Random and add it to the array list
 		for (int i = 0; i < keys; i++){
 			Random gen = new Random();
@@ -36,25 +39,35 @@ public class HashTables {
 			hash.get(position).add(key);
 		}
 		
+		int lng = 0;
 		
 		// Looping through and enumerating all linked lists.
 		for (int i = 0; i < tableSize; i++){
 			
+			System.out.println("\nThe list at index " + i + " is: ");
 			// If the current list is not empty.
 			if (!hash.get(i).isEmpty()){
-				System.out.println("\nThe list at index " + i + " contains: ");
-				
+				int count = 0;
 				// Get all elements of the linked list.
 				for (int j = 0; j < hash.get(i).size(); j++){
 					
 					if (hash.get(i).size() > 1 && j > 0){conflicts ++;}
-			
 					System.out.print(hash.get(i).get(j).toString() + " ");
+					count++;
 				}
-				
+				if (count > lng) {lng = count;}
+			}
+			
+			if (hash.get(i).isEmpty()){
+				System.out.print("Empty");
 			}
 		}	
-		
-		System.out.println("\nThe total number of conflicts is: " + conflicts + ".");
+		System.out.println();
+		System.out.println("\nStatistics: ");
+		System.out.println("Table Size: " + tableSize);
+		System.out.println("Total Number of keys: " + keys);
+		System.out.println("Load Factor: " + loadFac);
+		System.out.println("Conflicts: " + conflicts);
+		System.out.println("Longest List Size: " + lng);
 	}
 }
