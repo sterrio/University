@@ -89,9 +89,10 @@ public class BFS_Graph {
 			}
 		}
 			
+		System.out.println("The traversal is: ");
 		// print result lists
 		for (int i = 0; i < results.size(); i++){
-			System.out.println(mapSearch.get(results.get(i)));
+			System.out.print(mapSearch.get(results.get(i)) + "\t");
 		}
 
 	}
