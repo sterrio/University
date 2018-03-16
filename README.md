@@ -6,6 +6,7 @@ Progressively updated repository to upload projects throughout my computer scien
 ## Content
 
 **Data Structures & Algorithms** - CS 2110
+
 **Software Development** - CS 2132
 
 ## Current Objectives
