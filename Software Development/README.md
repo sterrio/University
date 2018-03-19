@@ -8,3 +8,5 @@ Prof. Meng He
 ## Content
 
 **Jarvis' March** - Forming a Convex Hull from given Coordinates.
+
+**Coordinates** - Solving Point averages & Dominate Points.
