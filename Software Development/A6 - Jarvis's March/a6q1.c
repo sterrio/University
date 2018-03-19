@@ -42,6 +42,8 @@ int main (void){
 
 convexhull[0][1] = pointcordx;
 convexhull[0][2] = highest;
+
+int Pcounter;
 /* Find the next clockwise point such that it is counter clock wise to every
 other directed line, formula: (x1 − x0)(y2 − y0) − (x2 − x0)(y1 − y0)  */
 
@@ -76,7 +78,11 @@ for (int i = 0; i < num_p; i ++){
       //otherwise test success, and point belongs in convexhull
       convexhull[i+1][0] = points[j][0];
       convexhull[i+1][1] = points[j][1];
+      pcounter= pcounter+1;
     }
+  }
+  for (int i = 0; i < pcounter; i++){
+    printf("%d %d",convexhull[i][0],convexhull[i][1]);
   }
 
 }
