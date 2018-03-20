@@ -17,7 +17,7 @@ int main (void){
   int convexhull[num_p][2];
 
 /* Setting the coordinates into the points array */
-  for (int i = 0; i > num_p; i ++){
+  for (int i = 0; i < num_p; i ++){
 
     int tempx,tempy;
     scanf("%d %d", &tempx,&tempy);
@@ -32,7 +32,6 @@ int main (void){
   int pointcord;
 
   highest = points [0][1];
-
   for (int i = 0; i < num_p; i++){
     if (points[i][1] > highest){
       highest = points[i][1];
@@ -44,6 +43,8 @@ convexhull[0][0] = pointcord;
 convexhull[0][1] = highest;
 
 int pcounter;
+pcounter = 0;
+
 /* Find the next clockwise point such that it is counter clock wise to every
 other directed line, formula: (x1 − x0)(y2 − y0) − (x2 − x0)(y1 − y0)  */
 
@@ -61,13 +62,13 @@ for (int i = 0; i < num_p; i ++){
         if (t == j ){continue;}
 
         /* if we are on the index point, skip. */
-        if(points [t][0] == pointcord){
-          continue;
-        }
+        if(points [t][0] == pointcord){continue;}
+
         int ccwTest;
         ccwTest = (points[j][0] - convexhull[i][0])*(points[t][1]
-        - convexhull[i][1]) - (points[t][0] - convexhull[i][0])*(points[j][0]
-        - convexhull[i][0]);
+        - convexhull[i][1]) - (points[t][0] - convexhull[i][0])*(points[j][1]
+        - convexhull[i][1]);
+
 
          /* if a test line is clockwise to potential, break. */
          if (ccwTest >= 0){redflag = 1; break;}
@@ -76,13 +77,17 @@ for (int i = 0; i < num_p; i ++){
       /* if test case failed, try next point */
       if (redflag == 1){continue;}
       /* otherwise test success, and point belongs in convexhull */
-      convexhull[i+1][0] = points[j][0];
-      convexhull[i+1][1] = points[j][1];
-      pcounter= pcounter+1;
+      if (redflag == 0){
+        convexhull[i+1][0] = points[j][0];
+        convexhull[i+1][1] = points[j][1];
+        pcounter= pcounter+1;
+      }
     }
   }
-  for (int i = 0; i < pcounter; i++){
-    printf("%d %d",convexhull[i][0],convexhull[i][1]);
+  printf("The count is: %d\n",pcounter);
+
+  for (int i = 0; i < 12; i++){
+    printf("%d %d\n",convexhull[i][0],convexhull[i][1]);
   }
 
 }
