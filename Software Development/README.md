@@ -7,6 +7,8 @@ Prof. Meng He
 
 ## Content
 
+**Coordinates** - Solving Point averages & Point domination.
+
 **Jarvis' March** - Forming a Convex Hull from given Coordinates.
 
-**Coordinates** - Solving Point averages & Dominate Points.
+**Numeric Roots & Linear Calc** - Polynomial & Numeric root calculators. 
