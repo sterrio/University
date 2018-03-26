@@ -7,8 +7,10 @@ Prof. Meng He
 
 ## Content
 
+**Binary Digits** - Solving permissions of a file from Binary Digits.
+
 **Coordinates** - Solving Point averages & Point domination.
 
 **Jarvis' March** - Forming a Convex Hull from given Coordinates.
 
-**Numeric Roots & Linear Calc** - Polynomial & Numeric root calculators. 
+**Numeric Roots & Linear Calc** - Polynomial & Numeric root calculators.
