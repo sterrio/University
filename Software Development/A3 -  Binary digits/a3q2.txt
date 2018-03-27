@@ -1,0 +1,12 @@
+a) The string 2ndday is not a legal identifier in C because you cannot 
+begin a name with a number as C was not built to handle it. To fix this error,
+we could just use the word "Second" instead.
+
+b) To combine the two of these printf commands into one is actually very 
+easy. All we need to do is combine the two of them together and use the 
+/n character to drop a new line. The new command would look like this
+
+printf("All that is gold does not glitter,\n
+  Not all those who wander are lost\n");
+
+

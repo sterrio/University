@@ -1,0 +1,7 @@
+Script started on Wed 14 Feb 2018 05:21:58 PM AST
+[?1034hterrio@bluenose:~/csci2132/a3$ eho[K[Kcho The current time is `date`
+The current time is Wed Feb 14 17:22:11 AST 2018
+terrio@bluenose:~/csci2132/a3$ exit
+exit
+
+Script done on Wed 14 Feb 2018 05:22:13 PM AST

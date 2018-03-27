@@ -1,0 +1,10 @@
+b)
+
+To move  a foreground process to the background we first have to suspend
+the program using CTRL+z, this will then allow us to use the command we need 
+to move the program to the background. The command we will use to do that
+is 
+
+bg %id
+
+where id is the process id.
