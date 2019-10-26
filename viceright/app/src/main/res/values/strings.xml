@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ViceRight</string>
+    <string-array name="substance_Type">
+        <item>Substance</item>
+        <item>Alcohol</item>
+        <item>Cannabis</item>
+    </string-array>
+    <string-array name="timeFrame">
+        <item>Weekly</item>
+        <item>Daily</item>
+        <item>Monthly</item>
+        <item>Yearly</item>
+        <item>Total</item>
+    </string-array>
+</resources>

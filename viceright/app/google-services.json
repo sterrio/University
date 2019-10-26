@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "979721469097",
+    "firebase_url": "https://viceright-b8050.firebaseio.com",
+    "project_id": "viceright-b8050",
+    "storage_bucket": "viceright-b8050.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:979721469097:android:3e738d7335634a85",
+        "android_client_info": {
+          "package_name": "com.group9.viceright"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "979721469097-sf19ulertmb506h8un94iujtvgrruj4s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1z7afxr-8mjsxtZRJzGPBKOeTr4KeiBg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "979721469097-sf19ulertmb506h8un94iujtvgrruj4s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
