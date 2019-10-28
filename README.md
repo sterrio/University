@@ -1,18 +1,30 @@
 # University
 
-Progressively updated repository to upload projects throughout my computer science degree. These are mainly disconnected projects with a purpose of testing various features within Java.
+Progressively updated repository to upload projects throughout my computer science degree. These are mainly disconnected projects with a purpose of testing various features within Java, C, and other programming languages.
 
+<p align="right">
+  <a href="https://www.gnu.org/licenses/gpl-3.0">
+    <img src="https://img.shields.io/badge/License-GPL%20v3-blue.svg">
+  </a>
+</p>
 
 ## Classes
 
 **Data Structures & Algorithms** - CS 2110
 
+The Study, design, implementation and analysis of a number of data structures such as linked lists, stacks, queues, binary trees, AVL trees, heaps, hash tables, maps, sets, and graphs. Algorithms on data structures include a variety of searching, sorting and graph algorithms.
+
 **Software Development** - CS 2132
+
+This course introduces programming and software development techniques in a procedural language. In particular, the C programming language and the UNIX operating system will be used to teach program design paradigms, source code management, software testing, debugging, scripting, and other techniques useful for software development.
 
 **Web Development** - CS 1170
 
+The introduction of key web concepts and skills for designing, implementing, and maintaining web content. Topics include UI and UX best practices, hypertext markup languages such as HTML, style sheets, client side programming, multimedia foundations, dynamic content and web content organization and maintenance.
+
 **Systems Programming** - CS 2122
 
+Presents tools, techniques, and concepts for systems programming. Students will be exposed to assembly and will be introduced to the C programming language. The course also discusses memory hierarchies, performance measurement, exception control flow, and performance related issues.
 
 ## Projects
 
@@ -29,11 +41,11 @@ An app designed around the intake and control of certain known vices.
 
 <p align="left">
 
-   <img src="https://imgur.com/9r8Uzbm.png" width="225px" height="375px"/>
+   <img src="https://imgur.com/9r8Uzbm.png" width="275px" height="460px"/>
 
-   <img src="https://imgur.com/soRiGDD.png" width="225px" height="375px"/>
+   <img src="https://imgur.com/soRiGDD.png" width="275px" height="460px"/>
 
-   <img src="https://imgur.com/8ApV46d.png" width="225px" height="375px"/>
+   <img src="https://imgur.com/8ApV46d.png" width="275px" height="460px"/>
 </p>
 
 
