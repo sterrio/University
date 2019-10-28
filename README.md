@@ -9,6 +9,12 @@ Progressively updated repository to upload projects throughout my computer scien
 
 **Software Development** - CS 2132
 
+**Web Development** - CS 1170
+
+**Systems Programming** - CS 2122
+
+**ViceRight** - CS 3130
+
 ## Current Objectives
 
 * Database Management (SQL)
