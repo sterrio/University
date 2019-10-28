@@ -24,12 +24,21 @@ An app designed around the intake and control of certain known vices.
  monthly scale, and are notified when certain drugs are incompatible to take with one another, or when an unsafe amount of a drug is consumed.
 
  <p align="center">
-    <img src="https://imgur.com/RQdytOn.png"/>
+    <img src="https://imgur.com/B4UyoGl.png"/>
  </p>
 
-<p align="center">
-   <img src="https://imgur.com/2qnou5T.png" width="300px" height="600px"/>
+<p align="left">
+   <img src="https://imgur.com/9r8Uzbm.png" width="300px" height="600px"/>
 </p>
+
+<p align="center">
+   <img src="https://imgur.com/soRiGDD.png" width="300px" height="600px"/>
+</p>
+
+<p align="right">
+   <img src="https://imgur.com/8ApV46d.png" width="300px" height="600px"/>
+</p>
+
 
 ## Current Objectives
 
