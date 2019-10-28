@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://www.pinclipart.com/picdir/big/330-3302186_open-book-clipart-png-download.png" width="389px"height="191px">
+</p>
+
 # University
 
 Progressively updated repository to upload projects throughout my computer science degree. These are mainly disconnected projects with a purpose of testing various features within Java, C, and other programming languages.
@@ -26,9 +30,12 @@ The introduction of key web concepts and skills for designing, implementing, and
 
 Presents tools, techniques, and concepts for systems programming. Students will be exposed to assembly and will be introduced to the C programming language. The course also discusses memory hierarchies, performance measurement, exception control flow, and performance related issues.
 
-## Projects
 
-**ViceRight** - CS 3130
+# Featured - **ViceRight**
+
+<a>
+  <img src="https://img.shields.io/badge/Language-Java-brightgreen.svg">
+</a>
 
 An app designed around the intake and control of certain known vices.
 
