@@ -33,14 +33,16 @@ Presents tools, techniques, and concepts for systems programming. Students will 
 
 # Featured - **ViceRight**
 
-<a>
-  <img src="https://img.shields.io/badge/Language-Java-brightgreen.svg">
-</a>
-
 An app designed around the intake and control of certain known vices.
 
  Users can use the app as a journal to record personal intake amounts & times for better health management. They can see their usage on a daily, weekly, and
  monthly scale, and are notified when certain drugs are incompatible to take with one another, or when an unsafe amount of a drug is consumed.
+
+<p align = "right">
+   <a>
+    <img src="https://img.shields.io/badge/Language-Java-brightgreen.svg">
+  </a>
+</p>
 
  <p align="center">
     <img src="https://imgur.com/B4UyoGl.png" width="583px" height="960"/>
