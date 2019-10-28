@@ -3,7 +3,7 @@
 Progressively updated repository to upload projects throughout my computer science degree. These are mainly disconnected projects with a purpose of testing various features within Java.
 
 
-## Content
+## Classes
 
 **Data Structures & Algorithms** - CS 2110
 
@@ -13,7 +13,20 @@ Progressively updated repository to upload projects throughout my computer scien
 
 **Systems Programming** - CS 2122
 
+
+## Projects
+
 **ViceRight** - CS 3130
+
+<p align="center">
+   <img src="https://imgur.com/2qnou5T"/>
+</p>
+
+<p align="center">
+   <img src="https://imgur.com/RQdytOn"/>
+</p>
+
+
 
 ## Current Objectives
 
