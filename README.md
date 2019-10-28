@@ -23,16 +23,13 @@ An app designed around the intake and control of certain known vices.
  Users can use the app as a journal to record personal intake amounts & times for better health management. They can see their usage on a daily, weekly, and
  monthly scale, and are notified when certain drugs are incompatible to take with one another, or when an unsafe amount of a drug is consumed.
 
-<p align="center">
-   <img src="https://imgur.com/2qnou5T.png" width: "300"
-   height: "600"/>
-</p>
+ <p align="center">
+    <img src="https://imgur.com/RQdytOn.png"/>
+ </p>
 
 <p align="center">
-   <img src="https://imgur.com/RQdytOn.png"/>
+   <img src="https://imgur.com/2qnou5T.png" width="300px" height="600px"/>
 </p>
-
-
 
 ## Current Objectives
 
