@@ -1,0 +1,19 @@
+Citations --
+Stephen Terrio
+B00755443
+
+
+Index html --
+https://i.pinimg.com/originals/94/2f/19/942f19328bb1fcd29da47aca467686a1.jpg
+(background)
+https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80
+(Image)
+https://billfish.org/wp-content/uploads/2019/08/placeholder-image.jpg (Alt)
+
+About Us --
+https://unsplash.com/photos/On8XUo3xOKA (background)
+https://unsplash.com/photos/_we0BQQewBo (Image next to paragraph)
+https://billfish.org/wp-content/uploads/2019/08/placeholder-image.jpg (Alt)
+
+Ipsum generator: 
+https://www.lipsum.com/feed/html
