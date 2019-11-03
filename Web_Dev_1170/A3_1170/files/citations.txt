@@ -1,0 +1,15 @@
+Background image for <main> used from:
+Dalhousie Faculty of Computer Science by Dalhousie University
+URL: https://cdn.dal.ca/faculty/computerscience/_jcr_content/bgBanner.adaptive.full.high.jpg/1526404931500.jpg
+Date accessed: 21 Oct 2019
+Renamed as: dalfcs.jpg
+
+Text content downloaded from:
+Lipsum.com
+URL: https://www.lipsum.com
+Date accessed: 21 Oct 2019
+
+HTML W3C checked via - https://validator.w3.org/nu/#file
+CSS W3C checked via - https://jigsaw.w3.org/css-validator/#validate_by_input
+
+
