@@ -1,0 +1,19 @@
+Stephen Terrio
+B00755443
+
+Given:
+Width of the body should be set to 1200px.
+The "gold" color is represented by #F2AC00.
+The "dark grey" color is represented by #707372.
+
+
+Assumptions:
+font family assumed to be arial for all properties.
+No text decoration on text in header.
+Text color in header is white.
+Padding has been universally assumed to 16px & 24px depending on the situation
+list-type was assumed to be none.
+font wight was assumed to be 600p for nav bars.
+font size assumed to be 13px.
+All section titles are uppercase in main.
+border radius for search input is assumed to be 4px.

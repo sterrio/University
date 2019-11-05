@@ -13,3 +13,4 @@ HTML W3C checked via - https://validator.w3.org/nu/#file
 CSS W3C checked via - https://jigsaw.w3.org/css-validator/#validate_by_input
 
 
+Original designs belong to Dalhousie University, attached in photo sources folder. 

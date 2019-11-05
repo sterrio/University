@@ -1,1 +1,147 @@
-s
+* {
+  margin: 0;
+  padding: 0;
+  font-family: arial;
+}
+
+li {
+  list-style-type: none;
+}
+/* Header Nav ------- */
+
+#secondaryNav {
+  color: #707372;
+  background-color: #707372;
+  height: 45px;
+  width: 100%;
+}
+
+#secondaryNav ul {
+  position: absolute;
+  right: 16px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+#secondaryNav li {
+  display: inline;
+  color: white;
+  text-decoration: none;
+}
+
+#secondaryNav li:not(:first-of-type) {
+  margin-left: 16px;
+}
+
+#secondaryNav a {
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight:600;
+}
+
+/* Header ---- */
+
+header {
+  position: relative;
+  padding: 12px 16px;
+}
+
+#mainHeading {
+  max-width: 300px;
+  line-height: 20px;
+
+}
+
+#mainHeading a {
+  color: black;
+  text-decoration: none;
+  font-size:20px;
+  max-width: 20px;
+}
+
+#searchForm {
+position: absolute;
+right: 16px;
+top:27.5px;
+}
+
+body {
+  position: relative;
+  width: 1200px;
+  display: block;
+  margin: 0 auto;
+}
+
+main {
+  background-image: url("../img/dalfcs.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  padding-top: 100px;
+}
+
+#keywordBox {
+  border-radius: 4px;
+}
+
+/* Body Nav */
+
+#primaryNav {
+  background-color: rgba(239, 239, 239, 1);
+  padding: 12px 16px;
+}
+
+#primaryNav li {
+  display: inline;
+  font-weight: 600;
+}
+
+#primaryNav li:not(:first-of-type) {
+  margin-left: 16px;
+}
+
+#primaryNav a {
+  color: #707372;
+  text-decoration: none;
+}
+
+section {
+  background-color: white;
+  margin: 0 150px;
+  padding:24px;
+}
+
+section h3{
+  padding-bottom:16px;
+  color: #F2AC00;
+  text-transform: uppercase;
+}
+
+/* Footer */
+
+footer {
+  background-color: black;
+  color: white;
+  padding: 50px 16px;
+  font-size: 13px;
+  position: relative;
+}
+
+#footerNav a:not(:first-of-type){
+  margin-left: 16px;
+}
+
+#footerNav {
+  position: absolute;
+  right: 16px;
+}
+
+#footerNav a{
+color: white;
+text-decoration: none;
+}
+
+#copyright {
+  position: absolute;
+  left: 16px;
+}
