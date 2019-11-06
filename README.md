@@ -30,6 +30,11 @@ The introduction of key web concepts and skills for designing, implementing, and
 
 Presents tools, techniques, and concepts for systems programming. Students will be exposed to assembly and will be introduced to the C programming language. The course also discusses memory hierarchies, performance measurement, exception control flow, and performance related issues.
 
+**Software Engineering** - CS 3130
+
+The course examines the process of software development, from initial planning through implementation and maintenance. A brief survey of available tools and techniques will be presented covering the topics of analysis, planning, estimating, project management, design, testing, and evaluation. Particular emphasis will be given to organizing and planning, team participation and management, top-down design and structure charts, system and information flow diagrams,
+walk-throughs and peer review, and testing and quality control.
+
 
 # Featured - **ViceRight**
 
