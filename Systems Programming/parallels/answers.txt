@@ -1,0 +1,15 @@
+answers to question 4.
+Stephen Terrio
+B00755443
+
+4. a)
+
+Between the two of them, parallel was quicker.
+
+b)
+
+By roughly 2 seconds. Parallel was 9 seconds, not parallel was
+11 seconds.
+
+c)
+it's an 18% speed up from the slower one. 
