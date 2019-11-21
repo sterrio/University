@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.wrapper {
+  max-width: 1200px;
+  display: block;
+  margin: 0 auto;
+}
+
+.header-wrapper.about {
+  background-image: url("../img/green-gate.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.header-wrapper.home {
+  background-image: url("../img/yellow-gate.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  color: white;
+}
+
+ul li {
+  display: inline-block;
+  margin-right: 50px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.cta_btn {
+  display: inline-block;
+  color: white;
+  background-color: #3D82F5;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+#prop_image {
+  display: inline-block;
+  width: 500px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.title {
+  margin-top: 60px;
+  margin-bottom: 40px;
+  color: white;
+}
+
+article.image_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+article.benifiets {
+  display: grid;
+  grid-row-gap: 50px;
+  grid-template-columns: 1fr;
+}
+
+.contact_us {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 500px;
+  grid-row-gap: 10px;
+}
+
+.lower_articles {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 80px;
+}
+
+input {
+  -webkit-appearance: none;
+  padding: 1rem;
+  min-width: 500px;
+  border-radius: 5px;
+  font-size: 16px;
+  border: 1px solid #CCCCCC;
+}
+
+textarea {
+  overflow: auto;
+  outline: none;
+  box-shadow: none;
+  resize: none;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 1rem;
+  border: 1px solid #CCCCCC;
+
+}
+
+footer {
+  background-color: white;
+  color: white;
+  padding: 50px 16px;
+  font-size: 14px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  color: dimgray;
+}
+
+.nav-tablet, .nav-mobile {
+  display: none;
+}
+
+.nav-tablet > ul, .nav-mobile > ul {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+article {
+  margin-bottom: 20px;
+}
+
+.button-mobile {
+  display: none;
+  width: 60px;
+  margin-top: 16px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* MARK: Tablet CSS */
+/* Comments included on tablet version below, identical changes */
+@media only screen and (max-width: 1000px) and (min-width: 601px) {
+  .header-wrapper.about {
+    background-image: none;
+  }
+  
+  .header-wrapper.home {
+    background-image: none;
+  }
+
+  header > h3 {
+    display: none;
+  }
+
+  .nav-desktop, .nav-mobile {
+    display: none;
+  }
+
+  .nav-tablet {
+    display: block;
+    color: #666;
+  }
+
+  .nav-tablet li {
+    margin: 0 250px;
+    text-align: center;
+  }
+  
+
+  .button-mobile {
+    display: inline-block;
+  }
+
+  .title {
+    text-align: center;
+    color: black;
+  }
+
+  #prop_image {
+    width: 350px;
+    height: 350px;
+  }
+
+  .job_application {
+    display: none;
+  }
+
+  footer {
+    display: none;
+  }
+}
+
+/* MARK: Phone CSS*/
+
+/* 
+Very similar to tablet version, but changes under the width of 600px
+*/
+@media only screen and (max-width: 600px) {
+
+  /* getting rid of bg image*/
+  .header-wrapper.about {
+    background-image: none;
+  }
+
+  .header-wrapper.home {
+    background-image: none;
+  }
+  /* No header nav in mobile*/
+  header > h3 {
+    display: none;
+  }
+
+  .nav-desktop, .nav-tablet {
+    display: none;
+  }
+
+  /* Home and about nav*/
+  .nav-mobile {
+    display: block;
+    color: #666;
+  }
+
+  .nav-mobile li {
+    margin: 0 175px;
+    text-align: center;
+  }
+
+  /* Centering the bottom button & formatting the general view of button*/
+  .button-container-mobile {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .button-mobile {
+    width: 60px;
+    display: inline-block;
+  }
+  .cta_btn {
+    align-items: center;
+  }
+
+  /* Making sure text is apparent with no bg image*/
+  .title {
+    text-align: center;
+    color: black;
+  }
+
+  /* Reformatting image to fit better*/
+  #prop_image {
+    width: 250px;
+    height: 250px;
+  }
+
+  /* Neither of these elements are needed in mobile */
+  .job_application {
+    display: none;
+  }
+
+  footer {
+    display: none;
+  }
+}
