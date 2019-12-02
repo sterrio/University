@@ -1,0 +1,19 @@
+Background image for <main> used from:
+Dalhousie Faculty of Computer Science by Dalhousie University
+URL: https://cdn.dal.ca/faculty/computerscience/_jcr_content/bgBanner.adaptive.full.high.jpg/1526404931500.jpg
+Date accessed: 21 Oct 2019
+Renamed as: dalfcs.jpg
+
+Text content downloaded from:
+Lipsum.com
+URL: https://www.lipsum.com
+Date accessed: 21 Oct 2019
+
+Self study material - 
+https://www.w3schools.com/jsref/event_oninput.asp
+https://www.w3schools.com/jsref/prop_text_value.asp
+https://www.w3schools.com/jsref/event_onclick.asp
+
+Regex Help - 
+https://regex101.com/
+

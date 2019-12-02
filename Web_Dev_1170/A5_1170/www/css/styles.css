@@ -1,0 +1,199 @@
+/* Default styles for the page body, including font family, padding/margin
+ and width */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0 auto;
+	padding: 0;
+	width: 1200px;
+}
+
+/* Styles for the web page header, and the main heading and the search form */
+header {
+	min-height: 100px;
+	overflow: auto;
+	padding: 10px;
+}
+
+h1 a:link,
+h1 a:visited {
+	color: black;
+	text-decoration: none;
+}
+
+h1 a:hover {
+	color: #f2ac00;
+}
+
+#mainHeading {
+	width: 300px;
+	font-size: 1.5em;
+	float: left;
+}
+
+#searchForm {
+	float: right;
+	margin: 24px 0;
+}
+
+#keywordBox { 
+	height: 30px;
+	width: 200px;
+	border-radius: 10px; 
+}
+
+#keywordBox:focus {
+	background-color: khaki;
+}
+
+
+/* Styles for the page footer, and its contents */
+footer {
+	min-height: 100px;
+	background-color: black;
+	overflow: auto;
+}
+
+footer div {
+	width: 48%;
+	float: left;
+	margin: 0;
+	padding: 0px 0px 0px 10px;
+	color: white;
+	line-height: 100px;
+	vertical-align: middle;
+	padding: 10px;
+}
+
+
+/*
+ * Background image for <main> used from:
+ * Dalhousie Faculty of Computer Science by Dalhousie University
+ * URL: https://cdn.dal.ca/faculty/computerscience/_jcr_content/bgBanner.adaptive.full.high.jpg/1526404931500.jpg
+ * Date accessed: 21 Oct 2019
+ * Renamed as: dalfcs.jpg
+ */
+main {
+	min-height: 500px;
+	background: url("../img/dalfcs.jpg") no-repeat;
+	padding: 100px 0px;
+}
+
+/* The main element includes a division with the ID of "content" that
+ contains all information to be presented in the homepage of this website */
+#content {
+	min-height: 800px;
+	background-color: white;
+	width: 80%;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+/* Each section has some spacing around it, so that content is not cluttered */
+section {
+	margin: 10px 0px 40px 0px;
+}
+
+h3 {
+	color: #f2ac00;
+	text-transform: uppercase;
+}
+
+/* The primary and secondary navigation menus contain unordered lists,
+ * while the footer navigation menu simply includes anchor links.
+ * This section tests how to style various navigation links.
+ */
+#primaryNav {
+	min-height: 40px;
+	background-color: #EFEFEF;
+	font-weight: bold;
+	line-height: 40px;
+	vertical-align: middle;
+	clear: both;
+}
+
+#secondaryNav {
+	min-height: 30px;
+	background-color: #707372;
+	line-height: 30px;
+	vertical-align: middle;
+	font-size: 0.8em;
+	text-align: right;
+}
+
+#primaryNav ul,
+#secondaryNav ul {
+	margin: 0;
+	padding: 0;
+}
+
+#primaryNav li {
+	list-style-type: none;
+	display: inline-block;
+	padding: 3px 10px 3px 10px;
+}
+
+#secondaryNav li {
+	list-style-type: none;
+	display: inline-block;
+	padding: 3px 10px 3px 10px;
+}
+
+#primaryNav a:link,
+#primaryNav a:visited {
+	color: #707372;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#primaryNav a:hover {
+	color: #f2ac00;
+}
+
+#secondaryNav a:link,
+#secondaryNav a:visited {
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#secondaryNav a:hover {
+	color: yellow;
+}
+
+#footerNav {
+	min-height: 30px;
+	width: 48%;
+	float: left;
+	margin: 0;
+	padding: 0px 10px 0px 0px;
+	text-align: right;
+	line-height: 100px;
+	vertical-align: middle;
+	font-size: 0.8em;
+	text-align: right;
+	padding: 10px;
+}
+
+#footerNav a {
+	padding: 0px 10px 0px 10px;
+}
+
+#footerNav a:link,
+#footerNav a:visited {
+	color: white;
+	text-decoration: none;
+}
+
+#footerNav a:hover {
+	color: yellow;
+}
+
+
+/* 
+ * Button in the form styled so that the text is larger and the button would occupy a minimum width.
+ */
+#showMessageFormBtn {
+	width: 40%;
+	height: 60px;
+	font-size: 1.5em;
+}
