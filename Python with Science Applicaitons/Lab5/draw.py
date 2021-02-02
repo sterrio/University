@@ -61,8 +61,6 @@ turtleWindow = turtle.Screen()
 turtleWindow.title("Launch")
 t = turtle.Turtle()
 
-
-
-drawFlower(t, 150, 90, 7, 50)
+drawFlower(t, 150, 90, 6, 60)
 # Using exit on click to view a preview of the shape before auto-closing.
 turtle.exitonclick()
