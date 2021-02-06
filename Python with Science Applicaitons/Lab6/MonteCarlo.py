@@ -5,6 +5,9 @@
 import math
 import random
 import numpy as np
+import matplotlib.pyplot as plt
+
+# PART 1 - DEFINITION & TABLE
 
 def PI(darts):
     # Used to keep track of all dart throw attempts
@@ -47,7 +50,7 @@ countInLocFive = 0
 countInLocSix = 0
 
 for i in range(0,10000):
-    estimation = PI(1000)
+    estimation = PI(10000)
     if  estimation < 3.1:
         countInLocOne+=1
     elif estimation >= 3.1 and estimation < 3.12:
@@ -64,3 +67,12 @@ for i in range(0,10000):
 print("\nThe numpy count values are: ")
 countArray = np.array([countInLocOne,countInLocTwo,countInLocThree,countInLocFour,countInLocFive,countInLocSix])
 print(countArray)
+
+### PART III - HISTOGRAM
+fig,bars = plt.subplots()
+x = np.arange(len(countArray))
+bars.bar(x,countArray)
+bars.set_xticks(x)
+plt.show()
+
+## COMPLETE ! :D
