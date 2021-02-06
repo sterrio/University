@@ -36,3 +36,31 @@ for i in range(1,5): # 10 -> 10,000
         print("Number of Trials = %-8d   Estimated = %f   Error = %.6f" %(attempts,estimation,error))
     else:
     	print("Number of Trials = %-8d   Estimated = %f   Error = %+.6f" %(attempts,estimation,error))
+
+## PART II - NUMPY
+# init variables for the np.array of counts
+countInLocOne = 0
+countInLocTwo = 0
+countInLocThree = 0
+countInLocFour = 0
+countInLocFive = 0
+countInLocSix = 0
+
+for i in range(0,10000):
+    estimation = PI(1000)
+    if  estimation < 3.1:
+        countInLocOne+=1
+    elif estimation >= 3.1 and estimation < 3.12:
+        countInLocTwo+=1
+    elif estimation >= 3.12 and estimation < 3.14:
+        countInLocThree+=1
+    elif estimation >= 3.14 and estimation < 3.16:
+        countInLocFour+=1
+    elif estimation >= 3.16 and estimation < 3.18:
+        countInLocFive+=1
+    elif estimation >= 3.18:
+        countInLocSix+=1
+
+print("\nThe numpy count values are: ")
+countArray = np.array([countInLocOne,countInLocTwo,countInLocThree,countInLocFour,countInLocFive,countInLocSix])
+print(countArray)
