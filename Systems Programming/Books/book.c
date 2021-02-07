@@ -14,11 +14,11 @@ Book* make_book(int total){
   Book* book = (Book*)malloc(sizeof(Book));
   // Initializing variables when they have not been already
   if (book != NULL){
-    book->total = total; // Set to the input's Line Total
     book->characterCount = 0; // char count
     book->lineCount = 0; /// line count
-    // Allocating memory for each line to be stored as a string (char**)
-    book->lines = (char**)malloc(total * sizeof(char*));
+    // Allocating memory for each line to be stored as a string (char**) (based on size of char*)
+    book->lines = malloc(total * sizeof(char*));
+    book->total = total; // Set to the input's Line Total
     for (int i = 0; i < total; i++){
       //Initialise each line, they will later be filled by the function fill_book
       book->lines[i] = NULL;
@@ -43,7 +43,7 @@ void burn_book(Book *book){
           book->lines[i] = NULL;
         }
       }
-      // deallcating the char** (lines) which contained the Characters
+      // deallocating the char** (lines) which contained the Characters
       free(book->lines);
       // setting the array to null
       book->lines = NULL;
@@ -75,19 +75,20 @@ bool save_book(Book *book, char* file){
 }
 
 // Reading from a File -
-// Taking file information and storing it into the book structure 
+// Taking file information and storing it into the book structure
 bool fill_book(Book *book, char* file){
   if (book != NULL){
     //Reading the book
     FILE *input = fopen(file, "r");
 
     int charNum = 0; // Storing the length of each line, with the help of lineLength
-    char lineLength[100] = { '\0' }; // All char** end with '\0' therefore, we can use this fact to determine the length of the line (100 should be enough)
+    char lineLength[2500] = { '\0' }; // All char** end with '\0' therefore, we can use this fact to determine the length of the line
+
     while ((book-> lineCount < book-> total) && fgets(lineLength, sizeof(lineLength), input) != NULL){
         // Getting the amount of chars in the Line
         charNum = strlen(lineLength);
         // Allocating the proper memory based on the amount of characters we have currently
-        book->lines[book->lineCount] = (char*)malloc(charNum+1*sizeof(char));
+        book->lines[book->lineCount] = malloc(charNum+1*sizeof(char));
         // Copying values to the book structure
         strncpy(book->lines[book->lineCount], lineLength, charNum);
         book->lines[book->lineCount][charNum] = '\0';
@@ -98,4 +99,40 @@ bool fill_book(Book *book, char* file){
     return true;
   }
   return false; /* Returning False if we could not write information from input */
+}
+
+// Editing Book Struct -
+// Removing the lines in which contain the specified input string, return amount of edits
+int edit_book(Book *book, char* input){
+  // Keeping track of number of edits, and current scanValue
+  int edits = 0;
+  char *scanValue = NULL;
+  // Looping through all the lines in the book for occurences
+  for (int i = 0; i < book->total; i++){
+    if (book->lines[i] != NULL){
+      // Using strstr to scan through the input for occurences of the input string, if there are none, then...
+      scanValue = strstr(book->lines[i], input);
+      // this code will not run - therefore bringing us to the end of the edits
+      if (scanValue != NULL){
+        // Deallocate
+        free(book->lines[i]);
+        // Remove the line, increase the edits
+        book->lines[i] = NULL;
+        (book->lineCount)-= 1;
+        edits++;
+      }
+    }
+  }
+  return edits;
+}
+
+// Printing to STDOUT -
+// Finally, reading through the book via each line
+void read_book(Book *book){
+  //Looping through and printing lines until we reach the total amount of lines
+  for (int i = 0; i < book->total; i++){
+    if (book->lines[i] != NULL){
+      printf("%s", book->lines[i]);
+    }
+  }
 }
