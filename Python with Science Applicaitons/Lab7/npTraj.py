@@ -14,7 +14,7 @@ velocityInit = int(input("Enter the initial velocity: "))
 angle = int(input("Enter the firing angle in degrees: "))
 
 # Initiallizing the other variables.
-maxTime = round(2*(velocityInit/9.81)) * 1.25 # estimated maximum Time, using *1.5 as buffer
+maxTime = 2*(velocityInit/9.81)  # estimated maximum Time, using *1.15 as buffer
 nIntervals = math.ceil(maxTime/timeInt) # The estimated amount of intervals
 time = 0 # Using to store current times in time array
 aX = 0 # acceleration for x
@@ -47,7 +47,6 @@ for i in range(0,nIntervals,1):
     xPos = np.append(xPos,x)
     #Y positions -
     y += velocityY*timeInt + 0.5*aY*(timeInt**2)
-    print(y)
     yPos = np.append(yPos, y)
     #Time -
     time += 0.02
@@ -71,5 +70,15 @@ for i in range(0,nIntervals,1):
         index = i
 timeMaxRange = timeVals[index]
 
+# Printing out the results in a table, with 6 numbers total, 3 after the decimal point
 for i in range(0, nIntervals, 1):
     print("Time = %6.3f  X position = %6.3f   Y position = %6.3f" %(timeVals[i], xPos[i], yPos[i]))
+
+# Returning Max Values and Times
+print("The Max Height %6.3f is reached at:%6.3f while The Max Range %6.3f is reached at:%6.3f" %(yMax, timeMaxHeight, xMax, timeMaxRange))
+
+# Plotting using Matplotlib
+plt.plot(xPos, yPos, 'b-')
+plt.xlabel("x")
+plt.ylabel("y")
+plt.show()
