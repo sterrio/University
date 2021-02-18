@@ -21,10 +21,10 @@ def drawArc(t, radius, degrees):
     #Drawing an arc length based on radius and angle
     radians = degrees * (math.pi/180)
     # converted agnle to radians
-    s = radius*radians
-    length = math.ceil(s/5)
+    s = int(radius*radians)
+    length = math.ceil((s/5))
     #Finding line length
-    polyLine(t,length,5,2.83)
+    polyLine(t,length,5,degrees/length)
 
 # Simply using drawArc, but for an entire 360 degree radius
 def drawCircle(t, radius):
@@ -61,6 +61,6 @@ turtleWindow = turtle.Screen()
 turtleWindow.title("Launch")
 t = turtle.Turtle()
 
-drawFlower(t, 150, 90, 6, 60)
+drawArc(t, 100, 90)
 # Using exit on click to view a preview of the shape before auto-closing.
 turtle.exitonclick()
