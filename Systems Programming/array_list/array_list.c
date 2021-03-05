@@ -76,7 +76,7 @@ void* alist_get(ArrayList* list, int x) {
 int alist_index_of(ArrayList* list, void* objV) {
     if (list != NULL && objV != NULL) {
         for (int i = 0; i < list->size; i++) {
-            if (objV == list->arr[i]) {
+            if (strcmp(objV, list->arr[i]) == 0) {
                 return i;
             }
         }

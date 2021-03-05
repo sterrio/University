@@ -1,10 +1,10 @@
-linked_list: linked_list.o linkedM.o 
-	gcc --std=c18 -I . linked_list.o linkedM.o -o linked_list
+bintree: bintree.o bintreeM.o
+	gcc --std=c18 -I . bintree.o bintreeM.o -o bintree
 
-linked_list.o: linked_list.c
-	gcc --std=c18 -c linked_list.c -o linked_list.o
+bintree.o: bintree.c
+	gcc --std=c18 -c bintree.c -o bintree.o
 
 clean:
-	-rm linked_list.o
+	-rm bintree.o
 
 .PHONY: clean
