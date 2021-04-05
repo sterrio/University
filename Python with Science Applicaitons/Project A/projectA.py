@@ -41,9 +41,21 @@ def adjMatrixFromFile(filename):
     dataXY.close()
     return adjArray
 
-
+# Defining Out Dgrees Function
 def outDegrees(adjacencyMatrix):
-
+    # Retreiving Length
+    length = len(adjacencyMatrix)
+    # Filling new np array to store summation
+    degreeArray = np.zeros((length,1))
+    # Looping through each element of each row, summing and saving to degree matrix
+    for i in range(length):
+        for j in range(length):
+            degreeArray[i][0] += adjacencyMatrix[i][j]
+    # retrun degree matrix
+    return degreeArray
 
 # Function Calls -
 adjM = adjMatrixFromFile(file)
+degM = outDegrees(adjM)
+print("Adjacency Matrix: \n", adjM)
+print("\n Out degrees: \n", degM)
