@@ -15,7 +15,6 @@ def adjMatrixFromFile(filename):
     lines = dataXY.readlines()
     matrixN = int(lines[0][0])
     nodeMatrix = []
-
     # Using that size to init the Adj Matrix
     adjArray = np.zeros((matrixN, matrixN))
     # We now have a string array of inputs, looping through each line for adj calcs
@@ -33,17 +32,16 @@ def adjMatrixFromFile(filename):
                     # Appending to a new node list
                     node = int(line[i])
                     nodeMatrix.append(node)
-
     # Looping through node list and adding nodes to adj Matrix
     for i in range(0, len(nodeMatrix), 2):
         adjArray[nodeMatrix[i]][nodeMatrix[i+1]] += 1
-
+    # Closing file and returning adjacency matrix
     dataXY.close()
     return adjArray
 
 # Defining Out Dgrees Function
 def outDegrees(adjacencyMatrix):
-    # Retreiving Length
+    # Retrieving Length
     length = len(adjacencyMatrix)
     # Filling new np array to store summation
     degreeArray = np.zeros((length,1))
@@ -54,8 +52,24 @@ def outDegrees(adjacencyMatrix):
     # retrun degree matrix
     return degreeArray
 
+# Defining probabilities function
+def transitionProbabilities(adjacencyMatrix, outDegrees):
+    # Retrieving Length
+    length = len(adjacencyMatrix)
+    # Filling new np array to store summation
+    transtionMatrix = np.zeros((length,length))
+    # Looping through each element of each row, calculate transition probabilities
+    for i in range(length):
+        for j in range(length):
+            transtionMatrix[i][j] += 0.90 * (adjacencyMatrix[i][j]/outDegrees[i][0]) + (0.10/length)
+    # retrun degree matrix
+    return transtionMatrix
+
 # Function Calls -
 adjM = adjMatrixFromFile(file)
 degM = outDegrees(adjM)
 print("Adjacency Matrix: \n", adjM)
 print("\n Out degrees: \n", degM)
+
+trPM = transitionProbabilities(adjM, degM)
+print("\n Transition Matrix: \n", trPM)
