@@ -65,11 +65,13 @@ def transitionProbabilities(adjacencyMatrix, outDegrees):
     # retrun degree matrix
     return transtionMatrix
 
+# Transposing the p Matrix for use in Markov Chain function -
+def transposeMatrix(matrix):
+    resultMatrix = matrix.transpose()
+    return resultMatrix
+
 # Function Calls -
 adjM = adjMatrixFromFile(file)
 degM = outDegrees(adjM)
-print("Adjacency Matrix: \n", adjM)
-print("\n Out degrees: \n", degM)
-
 trPM = transitionProbabilities(adjM, degM)
-print("\n Transition Matrix: \n", trPM)
+mMatrix = transposeMatrix(trPM)
