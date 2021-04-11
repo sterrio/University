@@ -1,16 +1,17 @@
 # Stephen Terrio, B00755443
-# Project A - Page Rank Simulation:
+# Project A - Page Rank Simulation - Random Crawler:
 
 # Packages -
 import numpy as np
 import math
 import random as rand
+import matplotlib.pyplot as plt
 from projectA import adjMatrixFromFile
-from projectA import outDegrees
+from projectA import outDegrees # Imported functions from previous file -
 from projectA import transitionProbabilities
 
 # Change this to the corresponding file name  -
-file = 'tiny.txt'
+file = 'medium.txt'
 
 # Getting User Input for number of trials performed
 numTrials = int(input("Enter the number of Trials: "))
@@ -48,4 +49,12 @@ def crawl(adjM, degM, trPM, numTrials):
             resultMatrix[i][0] = pageMatrix[0][i]/numTrials
     return resultMatrix
 
-print("Ranks: \n", crawl(adjM, degM, trPM, numTrials))
+
+crawlM = crawl(adjM, degM, trPM, numTrials)
+print("Ranks: \n", crawlM)
+
+
+plt.hist(crawlM, len(crawlM))
+plt.xlabel("Ranks")
+plt.ylabel("Appearance Amount")
+plt.show()

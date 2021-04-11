@@ -5,13 +5,14 @@
 import numpy as np
 import math
 import random as rand
+import matplotlib.pyplot as plt
 from projectA import adjMatrixFromFile
 from projectA import outDegrees # Imported functions from previous file -
 from projectA import transitionProbabilities
 from projectA import transposeMatrix
 
 # Change this to the corresponding file name  -
-file = 'tiny.txt'
+file = 'medium.txt'
 
 # Getting User Input for number of trials performed
 numTrials = int(input("Enter the number of Trials: "))
@@ -26,12 +27,21 @@ mMatrix = transposeMatrix(trPM)
 def markovCrawl(adjM, trPM, mMatrix, numTrials):
     # Initializing vector x0
     resultMatrix = np.zeros((len(adjM),1))
-    resultMatrix[1][0] += 1
-    pT = transposeMatrix(trPM)
-    vector = transposeMatrix(resultMatrix)
-    for i in range(numTrials):
-        vector = np.matmul(vector, pT)
-    resultMatrix = vector
+    for i in range((len(adjM))):
+        tempMatrix = np.zeros((len(adjM),1))
+        tempMatrix[i][0] += 1
+        vector = transposeMatrix(tempMatrix)
+        for j in range(numTrials):
+            vector = np.matmul(vector, mMatrix)
+        # Filling result matrix with values
+        for k in range(len(adjM)):
+            resultMatrix[i][0] = vector[0][0]
     return resultMatrix
 
-print("Ranks: \n", markovCrawl(adjM, trPM, mMatrix, numTrials))
+markovM = markovCrawl(adjM, trPM, mMatrix, numTrials)
+print("Ranks: \n", markovM)
+
+plt.hist(markovM, len(markovM))
+plt.xlabel("Ranks")
+plt.ylabel("Appearance Amount")
+plt.show()

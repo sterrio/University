@@ -14,6 +14,7 @@ def adjMatrixFromFile(filename):
     dataXY = open(filename,'r')
     lines = dataXY.readlines()
     matrixN = int(lines[0][0])
+    if(filename[0] == 'm'): matrixN = matrixN * 10
     nodeMatrix = []
     # Using that size to init the Adj Matrix
     adjArray = np.zeros((matrixN, matrixN))
@@ -33,7 +34,7 @@ def adjMatrixFromFile(filename):
                     node = int(line[i])
                     nodeMatrix.append(node)
     # Looping through node list and adding nodes to adj Matrix
-    for i in range(0, len(nodeMatrix), 2):
+    for i in range(0, len(nodeMatrix) - 1, 2):
         adjArray[nodeMatrix[i]][nodeMatrix[i+1]] += 1
     # Closing file and returning adjacency matrix
     dataXY.close()
@@ -61,7 +62,8 @@ def transitionProbabilities(adjacencyMatrix, outDegrees):
     # Looping through each element of each row, calculate transition probabilities
     for i in range(length):
         for j in range(length):
-            transtionMatrix[i][j] += 0.90 * (adjacencyMatrix[i][j]/outDegrees[i][0]) + (0.10/length)
+            if(outDegrees[i][0] != 0): transtionMatrix[i][j] += 0.90 * (adjacencyMatrix[i][j]/outDegrees[i][0]) + (0.10/length)
+        else: transtionMatrix[i][j] += 0
     # retrun degree matrix
     return transtionMatrix
 
