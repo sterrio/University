@@ -7,6 +7,7 @@ import math
 import random as rand
 import matplotlib.pyplot as plt
 from projectA import adjMatrixFromFile
+from projectAMod import adjMatrixFromFileMod
 from projectA import outDegrees # Imported functions from previous file -
 from projectA import transitionProbabilities
 

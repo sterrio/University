@@ -7,18 +7,20 @@ import math
 import random as rand
 import matplotlib.pyplot as plt
 from projectA import adjMatrixFromFile
+from projectAMod import adjMatrixFromFileMod
 from projectA import outDegrees # Imported functions from previous file -
 from projectA import transitionProbabilities
 from projectA import transposeMatrix
 
 # Change this to the corresponding file name  -
-file = 'medium.txt'
+file = 'mediumMod.txt'
 
 # Getting User Input for number of trials performed
 numTrials = int(input("Enter the number of Trials: "))
 
 # Function Calls -
-adjM = adjMatrixFromFile(file)
+adjM = adjMatrixFromFile(file) # uncomment and comment below to Count all Links
+# adjM = adjMatrixFromFileMod(file) # uncomment and comment above to Ignore Multiple Links
 degM = outDegrees(adjM)
 trPM = transitionProbabilities(adjM, degM)
 mMatrix = transposeMatrix(trPM)
@@ -39,8 +41,8 @@ def markovCrawl(adjM, trPM, mMatrix, numTrials):
     return resultMatrix
 
 markovM = markovCrawl(adjM, trPM, mMatrix, numTrials)
-print("Ranks: \n", markovM)
 
+print("Ranks: \n", markovM)
 plt.hist(markovM, len(markovM))
 plt.xlabel("Ranks")
 plt.ylabel("Appearance Amount")
