@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/jarretterrio/Desktop/terrio/miner/nonce.c
+stdlib.h
+-
+printf.h
+-
+nonce.h
+/Users/jarretterrio/Desktop/terrio/miner/nonce.h
+siggen.h
+/Users/jarretterrio/Desktop/terrio/miner/siggen.h
+pthread.h
+/Users/jarretterrio/Desktop/terrio/miner/pthread.h
+assert.h
+-
+
+/Users/jarretterrio/Desktop/terrio/miner/nonce.h
+
+/Users/jarretterrio/Desktop/terrio/miner/siggen.h
+

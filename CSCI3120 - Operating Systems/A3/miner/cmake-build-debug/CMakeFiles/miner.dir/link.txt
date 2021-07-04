@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/cc -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/miner.dir/main.c.o CMakeFiles/miner.dir/transactions.c.o CMakeFiles/miner.dir/siggen.c.o CMakeFiles/miner.dir/nonce.c.o CMakeFiles/miner.dir/mempool.c.o -o miner 

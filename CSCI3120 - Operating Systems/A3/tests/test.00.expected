@@ -1,0 +1,12 @@
+Adding transaction: 12358 Cat Dov 150000 20
+Adding transaction: 35813 Eve Fin 150000 25
+Adding transaction: 11235 Al Beth 150000 40
+Block mined: 1 0 0x00000000 3
+11235 Al Beth 150000 40
+12358 Cat Dov 150000 20
+35813 Eve Fin 150000 25
+Thread 0 checking nonce 0x00000000
+Thread 0 checking nonce 0x00000001
+Thread 0 checking nonce 0x00000002
+Thread 0 checking nonce 0x00000003
+0x00000003 0x00996b1f
