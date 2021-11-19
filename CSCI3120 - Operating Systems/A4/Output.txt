@@ -1,0 +1,48 @@
+FSFC:
+T1 0 8
+T2 8 12
+T3 12 21
+T4 21 26
+Waiting Time T1: 0
+Waiting Time T2: 7
+Waiting Time T3: 10
+Waiting Time T4: 18
+Average Waiting Time: 8.75
+
+RR:
+T1  0  4
+T2  4  8
+T3  8  12
+T4  12  16
+T1  16  20
+T3  20  24
+T4  24  25
+T3  25  26
+Waiting Time T1: 12
+Waiting Time T2: 3
+Waiting Time T3: 15
+Waiting Time T4: 17
+Average Waiting Time: 11.75
+
+NPSJF:
+T1  0  8
+T2  8  12
+T4  12  17
+T3  17  26
+Waiting Time T1: 0
+Waiting Time T2: 7
+Waiting Time T3: 15
+Waiting Time T4: 9
+Average Waiting Time: 7.75
+
+PSJF:
+T1  0  1
+T2  1  5
+T4  5  10
+T1  10  17
+T3  17  26
+Waiting Time T1: 9
+Waiting Time T2: 0
+Waiting Time T3: 15
+Waiting Time T4: 2
+Average Waiting Time: 6.50
