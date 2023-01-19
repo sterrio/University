@@ -55,11 +55,11 @@ An app designed around the intake and control of certain known vices.
 
 <p align="left">
 
-   <img src="https://imgur.com/9r8Uzbm.png" width="275" height="460px"/>
+   <img src="https://imgur.com/9r8Uzbm.png" width="274" height="460px"/>
 
-   <img src="https://imgur.com/soRiGDD.png" width="275" height="460px"/>
+   <img src="https://imgur.com/soRiGDD.png" width="274" height="460px"/>
 
-   <img src="https://imgur.com/8ApV46d.png" width="275" height="460px"/>
+   <img src="https://imgur.com/8ApV46d.png" width="274" height="460px"/>
 </p>
 
 
